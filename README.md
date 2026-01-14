@@ -205,7 +205,7 @@ Response: Array of user objects (only attending users)
 
 **Get Venue's Upcoming Events:**
 ```
-GET /api/v1/venues/{venue_id}/events?status=published&start_date=gt:2024-01-01
+GET /api/v1/venues/{venue_id}/events?status=published&start_date=gt:2026-02-01
 Response: Paginated events at this venue
 ```
 
@@ -226,7 +226,7 @@ Query Parameters:
 
 **Example Search:**
 ```
-GET /api/v1/events/search?city=Kampala&category=concert&start_date=gt:2024-03-01&price_max=50000&sort=date
+GET /api/v1/events/search?city=Kampala&category=concert&start_date=gt:2026-03-01&price_max=50000&sort=date
 ```
 
 ### Domain-Specific Operations
@@ -256,7 +256,7 @@ Response: Cancellation confirmation with affected ticket count
 **Venue Availability Check:**
 ```
 GET /api/v1/venues/{venue_id}/availability
-Query: date=2024-03-15
+Query: date=2026-03-15
 Response: {"available": true, "conflicting_events": []}
 ```
 
