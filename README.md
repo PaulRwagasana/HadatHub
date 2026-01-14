@@ -1,20 +1,20 @@
 # HadatHub Regional Event & Ticketing System - API Architecture Design
 
 ## Executive Summary
-This REST API design provides a scalable, intuitive foundation for HadatHub's regional event management platform. The architecture follows resource-oriented design principles with clear separation of concerns between events, venues, tickets, and users. Special attention is given to East African business contexts including multi-venue scheduling, flexible pricing models, and mobile-first consumption patterns.
+This REST API design provides a scalable, intuitive foundation for HadatHub's regional event management platform. The architecture follows resource-oriented design principles with clear separation of concerns between events, venues, tickets, and users. Special attention is given to East African business contexts including multi-venue scheduling, flexible pricing models, and mobile-first patterns.
 
 ## Domain Analysis
 
 ### Business Entities and Relationships
 **Primary Entities:**
-1. **Events** - Core business object representing concerts, conferences, festivals
-2. **Venues** - Physical locations hosting events with capacity constraints
-3. **Users** - System participants (attendees, organizers, administrators)
-4. **Tickets** - Purchased access rights to specific events
-5. **Organizers** - Event creators and managers (subset of Users with special permissions)
+1. **Events** - Core business object representing concerts, conferences, festivals.
+2. **Venues** - Physical locations hosting events with capacity constraints.
+3. **Users** - System participants (attendees, organizers, administrators(admins)).
+4. **Tickets** - Purchased access rights to specific events.
+5. **Organizers** - Event creators and managers (subset of Users with special permissions).
 
 **Critical Business Relationships:**
-- One Venue can host multiple Events, but not simultaneously (scheduling constraint)
+- One Venue can host multiple Events, but not simultaneously (scheduling constraint) 
 - One Event occurs at exactly one Venue (with potential for virtual events extension)
 - One User can purchase multiple Tickets for different Events
 - One Ticket grants access to exactly one Event for one User
@@ -25,13 +25,13 @@ This REST API design provides a scalable, intuitive foundation for HadatHub's re
 2. Ticket purchase flow with inventory management
 3. Attendee check-in at event venue
 4. Event creation and management by organizers
-5. Venue capacity tracking and conflict prevention
+5. Venue capacity tracking and conflict prevention 
 
 **Data Points Rationale:**
-- **Events** require date/time, pricing tiers, category tags, and organizer details to support diverse East African events from tech conferences to music festivals
+- **Events** require date/time, pricing tiers, category tags, and organizer details to support diverse East African events from tech conferences to music festivals etc...
 - **Venues** need precise location data, amenities, and capacity limits critical for regional compliance and attendee planning
 - **Tickets** must include purchase timestamp, price paid, and validation status for audit trails and fraud prevention
-- **Users** require contact information and preference settings optimized for mobile usage patterns in East Africa
+- **Users** require contact information and preference settings optimized for mobile usage  in East Africa
 
 ## Resource Specifications
 
