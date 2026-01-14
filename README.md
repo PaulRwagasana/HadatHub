@@ -307,3 +307,15 @@ Response: Check-in rates, peak hours, demographic summary
    - Rationale: Better performance for infinite scroll on mobile clients, consistent ordering
 
 This design provides a robust foundation for HadatHub's growth while maintaining simplicity for initial implementation. The API follows REST principles while accommodating real-world business constraints specific to the East African event management market.
+
+
+
+**AI Usage Note:** I used an AI tool to assist with formatting this document, specifically for:
+1. Structuring the Markdown tables to ensure proper alignment and readability
+2. Formatting the JSON schema code blocks for consistency
+3. Checking for proper HTTP status code usage and consistency
+4. Ensuring consistent heading hierarchy and document organization
+
+
+All business logic, API design decisions, resource modeling, and endpoint specifications were developed based on my analysis of the HadatHub requirements and REST API design principles.
+
